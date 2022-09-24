@@ -1,5 +1,25 @@
-html{
+html {
   font-size: 62.5%;
   box-sizing: border-box;
   /* converted root fontsize to 62.5% to allow rem values be in base the >>>>  100px = 10rem */
+}
+
+/* education and experiences */
+.gridContainer {
+  grid-template-areas:
+    'saed KodeCamp'
+    'Perxels Tech4dev'
+    'Obafemi Hub';
+}
+
+@media screen and (max-width:992px) {
+  .gridContainer {
+    grid-template-areas:
+      'saed'
+      'KodeCamp'
+      'Perxels'
+      'Tech4dev'
+      'Obafemi'
+      'Hub'
+  }
 }

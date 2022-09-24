@@ -5,6 +5,7 @@ import { Clients } from './Components/Clients'
 import EducationExperiences from './Components/Education_Experiences'
 import { Header } from './Components/Header'
 import { Nav } from './Components/Nav'
+import { Tools } from './Components/Tools'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <About />
       <Clients />
       <EducationExperiences />
+      <Tools />
     </>
   )
 }
