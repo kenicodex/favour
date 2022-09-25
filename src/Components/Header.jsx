@@ -1,25 +1,34 @@
 import { Button, Typography } from '@mui/material'
 import { Box } from '@mui/system'
-import React from 'react'
+import React, { useEffect } from 'react'
+import { motion } from 'framer-motion'
 const pxtoper = (px) => `${(px / 1440) * 100}%`
 
 const Typos = () => {
+    useEffect(() => {
+        for (let i = 0; i < 4; i++) {
+            document.querySelector('#twocolors').children[i].style.color = '#000000';
+        }
+    }, [])
     return (
         <>
 
             {/* ********************************** Hello Text********************************************* */}
             <Typography sx={{
                 position: "absolute",
-                left: { xs: pxtoper(31), lg: pxtoper(415), xl: pxtoper(600) },
+                left: { xs: 0, lg: pxtoper(450), xl: pxtoper(600) },
                 top: { xs: 90, lg: 162 },
                 fontFamily: "'Libre Baskerville'",
                 fontStyle: "normal",
-                fontWeight: "700",
+                fontWeight: "700", width: { xs: '100%', lg: 'auto' },
                 fontSize: { xs: '1.8rem', lg: "3rem" },
                 lineHeight: { xs: '2.23rem', lg: "3.7rem" },
-                color: "#333333"
+                color: "#333333", textAlign: 'center'
             }}>
                 Hello
+                <span id={'twocolors'}>{" I'm Favour Oyindamola Awosise".split("").map((x, i) =>
+                    <motion.span style={{ color: '#AF0116' }} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .4 * i, type: 'spring', stiffness: 200 }}>{x}</motion.span>
+                )}</span>
             </Typography>
             <Box sx={{ textAlign: 'center' }}>
 
