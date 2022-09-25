@@ -3,10 +3,13 @@ import React from 'react'
 
 export function Tools() {
     const tools = [
-        { img: '', tool: 'Figma', color: '', percent: '100%' }
+        { image: '', tool: 'Figma', bgcolor: 'rgba(10, 207, 131, 0.1)', percent: '100%' },
+        { image: '', tool: 'Adobe XD', bgcolor: 'rgba(71, 1, 55, 0.1)', percent: '100%' },
+        { image: '', tool: 'Google form', bgcolor: 'rgba(116, 75, 189, 0.1)', percent: '100%' },
+        { image: '', tool: 'Miro', bgcolor: 'rgba(255, 208, 47, 0.1)', percent: '100%' },
     ]
     return (
-        <Box sx={{ mt: { xs: '72px', lg: '90px' }, maxWidth: '1440px', px: '10rem', margin: 'auto' }}>
+        <Box sx={{ mt: { xs: '72px', lg: '90px' }, maxWidth: '1440px', px: { xs: '1.6rem', lg: '10rem' }, margin: 'auto' }}>
             <Typography sx={{
                 fontFamily: "'Libre Baskerville'",
                 fontStyle: "normal",
@@ -18,24 +21,45 @@ export function Tools() {
                 pb: '40px',
             }}>Tools Used</Typography>
 
-            <Box sx={{display:'flex'}}>
+            <Box sx={{
+                display: 'flex', flexDirection: 'row',
+                justifyContent: { xs: 'space-around', lg: 'space-between' },
+                flexWrap: { xs: 'wrap', lg: 'nowrap' }, rowGap: { xs: '66px' }
+            }}>
                 {tools.map((x, i) => {
                     return (
                         <Box>
+                            {/* <img scr={process.env.PUBLIC_URL + '/images/favour.png'} width={'75px'} height={'112px'} alt="" /> */}
                             <Box key={i} sx={{
-                                width: "228.46px",
-                                height: "324.15px",
-                                background: "#0ACF83",
-                                opacity: "0.1",
+                                width: { xs: '16.5rem', lg: "22.846rem" },
+                                height: { xs: '234px', lg: "324.15px" },
+                                background: x.bgcolor,
+                                display: 'flex', alignItems: 'center',
+                                justifyContent: 'center',
+                                mb: '1.6rem', flexDirection: 'column',
+                                gap: '32px',
+                                borderRadius: '50%'
                             }}>
-
+                                <img scr={'/images/favour.png'}  width={'75px'} height={'112px'} alt="err" />
+                                <Typography
+                                    sx={{
+                                        fontFamily: "'Libre Baskerville'",
+                                        fontStyle: "normal",
+                                        fontWeight: "700",
+                                        fontSize: { xs: '2rem', lg: '3rem' },
+                                        lineHeight: '3.7rem',
+                                        color: "#333333"
+                                    }}
+                                >
+                                    {x.percent}
+                                </Typography>
                             </Box>
                             <Typography sx={{
                                 fontFamily: "'DM Sans'",
                                 fontStyle: "normal",
                                 fontWeight: "700",
-                                fontSize: "20px",
-                                lineHeight: "26px",
+                                fontSize: { xs: '1.8rem', lg: '2rem' },
+                                lineHeight: { xs: '2.3rem', lg: '2.6rem' },
                                 textAlign: "center",
                                 color: "#333333"
                             }}>

@@ -9,7 +9,7 @@ function EducationExperiences() {
             org: 'SAED Integrated Services',
             position: 'Product Designer (Internship)',
             duration: 'March 2022 - August 2022',
-            achievement:'Worked on the UI designs for a healthcare website (CHOLEA), others (such as E-Library website and App, Real Estate website etc).....',
+            achievement: 'Worked on the UI designs for a healthcare website (CHOLEA), others (such as E-Library website and App, Real Estate website etc).....',
             achievementFull: 'Worked on the UI designs for a healthcare website (CHOLEA), others (such as E-Library website and App, Real Estate website etc)     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Alias magni voluptate iure optio sit. Nam odio, provident distinctio molestias nulla eius, reiciendis voluptate ipsam fugit ratione impedit! Sequi, eligendi voluptatum!',
 
 
@@ -64,7 +64,7 @@ function EducationExperiences() {
             {
                 props.data.map((x, i) => {
                     return (
-                        <Box sx={{ gridArea: x.gridarea, width: '423px', }}>
+                        <Box sx={{ gridArea: x.gridarea, width: { xs: '100%', lg: '423px' }, }}>
                             <Typography
                                 sx={{
                                     fontFamily: "'DM Sans'",
@@ -81,7 +81,7 @@ function EducationExperiences() {
                                     fontFamily: "'DM Sans'",
                                     fontStyle: "normal",
                                     fontWeight: "500",
-                                    fontSize: "16px",
+                                    fontSize: { xs: '1.4rem', lg: "1.6rem" },
                                     lineHeight: "25px",
                                     color: "#4F4F4F"
                                 }}>
@@ -92,8 +92,8 @@ function EducationExperiences() {
                                     fontFamily: "'DM Sans'",
                                     fontStyle: "normal",
                                     fontWeight: "400",
-                                    fontSize: "14px",
-                                    lineHeight: "16px",
+                                    fontSize: { xs: '1.4rem', lg: "1.6rem" },
+                                    lineHeight: "1.6rem",
                                     color: "#828282"
                                 }}>
                                 {x.duration}
@@ -103,13 +103,14 @@ function EducationExperiences() {
                                     fontFamily: "'DM Sans'",
                                     fontStyle: "normal",
                                     fontWeight: "400",
-                                    fontSize: "14px",
+                                    fontSize: { xs: '1.3rem', lg: "1.4rem" },
                                     lineHeight: "23px",
-                                    color: "#4F4F4F"
+                                    color: "#4F4F4F", width: '100%',
+                                    wordWrap: 'break-word'
                                 }}>
                                 {x.achievement}
                                 {/* {x.achievementFull} */}
-                                <span style={{ color: '#AF0116', cursor: 'pointer', display:x.achievement.length > 1 ? 'inline-block':'none' }}> Read More</span>
+                                <span style={{ color: '#AF0116', cursor: 'pointer', display: x.achievement.length > 1 ? 'inline-block' : 'none' }}> Read More</span>
                             </Typography>
                         </Box>
                     )
@@ -122,7 +123,8 @@ function EducationExperiences() {
             bgcolor: "rgba(175, 1, 22, .05)",
             height: { xs: 'auto', lg: 'auto' },
             p: { xs: '32px 4.1rem', lg: '48px 22.9rem' },
-            maxWidth: '1440px', mx: 'auto'
+            maxWidth: '1440px', mx: 'auto',
+            wordWrap: 'break-word'
         }}>
             <Typography
                 sx={{

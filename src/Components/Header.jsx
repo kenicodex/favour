@@ -10,7 +10,7 @@ const Typos = () => {
             {/* ********************************** Hello Text********************************************* */}
             <Typography sx={{
                 position: "absolute",
-                left: { xs: pxtoper(31), lg: pxtoper(415) },
+                left: { xs: pxtoper(31), lg: pxtoper(415), xl: pxtoper(600) },
                 top: { xs: 90, lg: 162 },
                 fontFamily: "'Libre Baskerville'",
                 fontStyle: "normal",
@@ -22,8 +22,8 @@ const Typos = () => {
                 Hello
             </Typography>
             <Box sx={{ textAlign: 'center' }}>
-                
-{/* // **********************************  Product Desiner a, Based In Nigeria and Hire me Button ********************************************* */}
+
+                {/* // **********************************  Product Desiner a, Based In Nigeria and Hire me Button ********************************************* */}
                 <Typography sx={
                     {
                         position: "absolute",

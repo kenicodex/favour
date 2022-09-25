@@ -5,6 +5,17 @@ html {
 }
 
 /* education and experiences */
+button>p:hover,
+button {
+  color: #AF0116 !important;
+  text-transform: capitalize !important;
+}
+
+button:hover {
+  border: 1px solid #AF0116 !important;
+}
+
+
 .gridContainer {
   grid-template-areas:
     'saed KodeCamp'

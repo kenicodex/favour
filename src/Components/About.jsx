@@ -60,8 +60,9 @@ export function About() {
             <Box sx={{
                 order: props.order,
                 border: '1.65419px dashed #AF0116', mx: { xs: 'auto' },
-                ml: { xs: 'auto', lg: `${5.7 - 1.2}rem` }, borderRadius: '260.4px',
+                ml: { xs: 'auto', lg: `${5.7 - 1.2}rem`, xl:'auto' }, borderRadius: '260.4px',
                 p: { xs: '1.4rem 1.8rem', lg: "3rem 3.7rem" },
+                // m: { xl: 'auto' },
                 width: { xs: 258.63, lg: 531.4 }, height: { xs: '404px', lg: '830px' }
             }}>
                 <Box component={'img'} src={process.env.PUBLIC_URL + '/images/favour.png'} height={'100%'} width={'100%'} alt="" />
@@ -76,7 +77,7 @@ export function About() {
             { metric: 'Projects done', content: () => <>+10</> },
         ]
         return (
-            <Box sx={{ order: props.order, display: 'flex', flexDirection: 'column', gap:{xs:'40px',lg:'136px' } }}>
+            <Box sx={{ order: props.order, display: 'flex', flexDirection: 'column', gap: { xs: '40px', lg: '136px' } }}>
                 {metrics.map((x, i) => {
                     return (
                         <Box sx={{
@@ -117,7 +118,7 @@ export function About() {
             <Box component={'div'} sx={{
                 display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, gap: { xs: '40px', lg: '0' },
                 alignItems: 'center', mt: { xs: '212px', lg: '358.97px' },
-                justifyContent: 'center', px: { xs: 'auto', lg: '10rem' }, maxWidth: '1440px', mx: 'auto'
+                justifyContent: { lg: 'center', xl: 'space-evenly' }, px: { xs: 'auto', lg: '10rem' }, maxWidth: '1440px', mx: 'auto'
             }}>
                 <Details order={{ xs: 3, lg: 1 }} />
                 <Image order={{ xs: 1, lg: 2 }} />
