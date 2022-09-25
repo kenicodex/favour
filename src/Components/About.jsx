@@ -32,7 +32,9 @@ export function About() {
                                 fontWeight: "400",
                                 lineHeight: "23px",
                                 letterSpacing: "0em",
-                                color: ' #828282'
+                                color: ' #828282',
+                                mb:'.8rem'
+
                             }}>
                                 {x.detail}
                             </Typography>
@@ -80,7 +82,7 @@ export function About() {
             <Box sx={{ order: props.order, display: 'flex', flexDirection: 'column', gap: { xs: '40px', lg: '136px' } }}>
                 {metrics.map((x, i) => {
                     return (
-                        <Box sx={{
+                        <Box key={i} sx={{
                             fontFamily: "'DM Sans'",
                             fontStyle: "normal", textAlign: { xs: 'center', lg: 'right' }
                         }}>
@@ -89,7 +91,8 @@ export function About() {
                                     fontWeight: "400",
                                     fontSize: "1.8rem",
                                     lineHeight: "2.3rem",
-                                    color: ' #828282;'
+                                    color: ' #828282;',
+                                    mb:'.8rem'
                                 }}>
                                 {x.metric}
                             </Typography>

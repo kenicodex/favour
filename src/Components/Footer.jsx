@@ -9,23 +9,16 @@ export function Footer() {
 
             <Box sx={{
                 px: { xs: '', lg: '10rem' }, display: 'flex', flexDirection: { xs: 'column', lg: 'row' },
-                 justifyContent: { xs: 'space-evenly', lg: 'space-between' }, alignItems: 'center',
+                justifyContent: { xs: 'space-evenly', lg: 'space-between' }, alignItems: 'center',
                 minHeight: { xs: "309px", lg: '148px' },
                 //  pt: { xs: '32px', lg: '0' }
             }}>
-                <Typography sx={{
-                    fontFamily: "'Irish Grover'",
-                    fontStyle: "normal",
-                    fontWeight: "400",
-                    fontSize: "3rem",
-                    lineHeight: "36px",
-                    color: "#FFFFFF"
-                }}
-                >Design_Mogul_</Typography>
+                <Box sx={{display:{xs:'inline-block',lg:'none'}}} component={'img'} src={process.env.PUBLIC_URL + '/images/footerlogo.png'} />
+                <Box sx={{display:{xs:'none',lg:'inline-block'}}} component={'img'} src={process.env.PUBLIC_URL + '/images/Design_Mogul.png'} />
 
                 <Box sx={{ display: 'flex', gap: { xs: '2.4rem', lg: '4.8rem' }, flexDirection: { xs: 'column', lg: 'row' }, mt: { xs: '3.2rem', lg: '0' } }}>
                     {[{ navitem: 'Works', link: '/' }, { navitem: 'My Resume', link: '/' }].map((x, i) => {
-                        return <Typography sx={{
+                        return <Typography key={i} sx={{
                             fontFamily: "'DM Sans'",
                             fontStyle: "normal",
                             fontWeight: "400",
@@ -47,7 +40,7 @@ export function Footer() {
                 </Box>
             </Box>
 
-            <Divider sx={{ bgcolor: '#F5F5F5', pt:0 }} />
+            <Divider sx={{ bgcolor: '#F5F5F5', pt: 0 }} />
             <Typography sx={{
                 fontFamily: "'DM Sans'",
                 fontStyle: "normal",
@@ -57,7 +50,7 @@ export function Footer() {
                 color: "#FFFFFF",
                 justifyContent: 'center',
                 display: 'flex',
-                alignItems: 'center',bgcolor: '#4F4F4F',
+                alignItems: 'center', bgcolor: '#4F4F4F',
                 height: { xs: '40px', lg: `${200 - 148}px` }
             }}>
                 Designed and built by Favour Oyindamola in 2022

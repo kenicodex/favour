@@ -1,12 +1,16 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
+import figma from './images/figma.png'
+import miro from './images/miro.png'
+import googleforms from './images/googleforms.png'
+import adobexd from './images/adobexd.png'
 
 export function Tools() {
     const tools = [
-        { image: '', tool: 'Figma', bgcolor: 'rgba(10, 207, 131, 0.1)', percent: '100%' },
-        { image: '', tool: 'Adobe XD', bgcolor: 'rgba(71, 1, 55, 0.1)', percent: '100%' },
-        { image: '', tool: 'Google form', bgcolor: 'rgba(116, 75, 189, 0.1)', percent: '100%' },
-        { image: '', tool: 'Miro', bgcolor: 'rgba(255, 208, 47, 0.1)', percent: '100%' },
+        { image: figma, tool: 'Figma', bgcolor: 'rgba(10, 207, 131, 0.1)', percent: '100%' },
+        { image: adobexd, tool: 'Adobe XD', bgcolor: 'rgba(71, 1, 55, 0.1)', percent: '100%' },
+        { image: googleforms, tool: 'Google form', bgcolor: 'rgba(116, 75, 189, 0.1)', percent: '100%' },
+        { image: miro, tool: 'Miro', bgcolor: 'rgba(255, 208, 47, 0.1)', percent: '100%' },
     ]
     return (
         <Box sx={{ mt: { xs: '72px', lg: '90px' }, maxWidth: '1440px', px: { xs: '1.6rem', lg: '10rem' }, margin: 'auto' }}>
@@ -28,7 +32,7 @@ export function Tools() {
             }}>
                 {tools.map((x, i) => {
                     return (
-                        <Box>
+                        <Box key={i}>
                             {/* <img scr={process.env.PUBLIC_URL + '/images/favour.png'} width={'75px'} height={'112px'} alt="" /> */}
                             <Box key={i} sx={{
                                 width: { xs: '16.5rem', lg: "22.846rem" },
@@ -40,7 +44,7 @@ export function Tools() {
                                 gap: '32px',
                                 borderRadius: '50%'
                             }}>
-                                <img scr={'/images/favour.png'}  width={'75px'} height={'112px'} alt="err" />
+                                <img src={x.image}  maxWidth={'85px'} maxHeight={'112px'} alt="err" />
                                 <Typography
                                     sx={{
                                         fontFamily: "'Libre Baskerville'",

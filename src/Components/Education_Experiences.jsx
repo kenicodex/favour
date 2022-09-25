@@ -57,14 +57,14 @@ function EducationExperiences() {
 
     // ]
     const Component = (props) => {
-        return <Box sx={{
+        return <Box  sx={{
             display: 'grid', columnGap: '120px', rowGap: { xs: '32px', lg: '64px' },
             width: { xs: '100%', lg: '100%' },
         }} className={'gridContainer'}>
             {
                 props.data.map((x, i) => {
                     return (
-                        <Box sx={{ gridArea: x.gridarea, width: { xs: '100%', lg: '423px' }, }}>
+                        <Box  key={i} sx={{ gridArea: x.gridarea, width: { xs: '100%', lg: '423px' }, }}>
                             <Typography
                                 sx={{
                                     fontFamily: "'DM Sans'",
@@ -72,7 +72,8 @@ function EducationExperiences() {
                                     fontWeight: "700",
                                     fontSize: { xs: '1.8rem', lg: '2rem' },
                                     lineHeight: "2.6rem",
-                                    color: "#333333"
+                                    color: "#333333",
+                                    mb:'5px'
                                 }}>
                                 {x.org}
                             </Typography>
