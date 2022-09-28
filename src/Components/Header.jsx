@@ -12,7 +12,7 @@ export function Header() {
             options={{
                 strings: [" I'm <span style='color:#AF0116'> Favour Oyindamola Awosise </span>"],
                 autoStart: true,
-                loop: true,
+                loop: true, cursor: ''
             }}
         />
     }
