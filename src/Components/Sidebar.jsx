@@ -4,9 +4,9 @@ import { AiOutlineCloseCircle } from 'react-icons/ai'
 import { GiHamburgerMenu } from 'react-icons/gi'
 
 
-import { BsBehance, BsFacebook, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import { BsBehance, BsLinkedin, BsTwitter } from 'react-icons/bs'
 import { GoMail } from 'react-icons/go'
-import { AiFillInstagram } from 'react-icons/ai'
+import { links } from './links'
 
 function Sidebar(props) {
     const [show, setShow] = useState(false)
@@ -51,19 +51,18 @@ function Sidebar(props) {
                         gap: '2rem', ml: '2rem', width: '100%', color: 'white', mt: '4rem'
                     }}>
                         {[
-                            { media: 'Twitter', icon: <BsTwitter />, link: '' },
-                            { media: 'Linkedin', icon: <BsLinkedin />, link: '' },
-                            { media: 'Behance', icon: <BsBehance />, link: '' },
-                            { media: 'Email', icon: <GoMail />, link: '' },
-                            { media: 'Instagram', icon: <AiFillInstagram />, link: '' },
-                            { media: 'Facebook', icon: <BsFacebook />, link: '' },
+                            { media: 'Twitter', icon: <BsTwitter />, link: links.twitter },
+                            { media: 'Linkedin', icon: <BsLinkedin />, link: links.linkedin },
+                            { media: 'Behance', icon: <BsBehance />, link: links.behance },
+                            { media: 'Email', icon: <GoMail />, link: links.email },
+                            // { media: 'Instagram', icon: <AiFillInstagram />, link: links.linkedin },
+                            // { media: 'Facebook', icon: <BsFacebook />, link: links.linkedin },
                         ].map((x, i) => {
-                            return <>
-                                <Box sx={{ display: 'flex', gap: '1rem', fontSize:'2rem' }}>
+                            return <Box key={i} sx={{ display: 'flex', gap: '1rem', fontSize:'2rem' }}>
                                     {x.icon}
                                     <Typography sx={{fontSize:'1.5rem'}}> {x.media}</Typography>
                                 </Box>
-                            </>
+                           
                         })}
 
                     </Box>

@@ -1,5 +1,6 @@
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import React from 'react'
+import { ContentText, DetailText, Metric, MetricNum } from './Text'
 
 const pxtoper = (px) => `${(px / 1440) * 100}%`
 
@@ -22,35 +23,20 @@ export function About() {
             },
         ]
         return (
-            <Box sx={{ order: props.order, display: 'flex', flexDirection: 'column', gap: { xs: '32px', lg: '95px' }, width: { xs: 'auto', lg: pxtoper(298) } }}>
+            <Box sx={{
+                order: props.order, display: 'flex', mt:{xs:'4rem', lg:'0'},
+                flexDirection: 'column', gap: { xs: '32px', lg: '95px' },
+                maxWidth: { xs: 'auto', lg: pxtoper(260) }, pl: { xs: 'auto', lg: '1.1rem' }
+            }}>
                 {details.map((x, i) => {
                     return (
-                        <Box key={i} sx={{ textAlign: { xs: 'center', lg: 'left' }, px: { xs: '3.2rem', lg: '0' } }}>
-                            <Typography sx={{
-                                fontFamily: "DM Sans",
-                                fontSize: "18px",
-                                fontWeight: "400",
-                                lineHeight: "23px",
-                                letterSpacing: "0em",
-                                color: ' #828282',
-                                mb:'.8rem'
-
-                            }}>
+                        <Box key={i} sx={{ textAlign: { xs: 'center', lg: 'left' }, px: { xs: '3.2rem', lg: '0' },  }}>
+                            <DetailText>
                                 {x.detail}
-                            </Typography>
-                            <Typography sx={
-                                {
-                                    fontFamily: "DM Sans",
-                                    fontSize: "16px",
-                                    fontWeight: "500",
-                                    lineHeight: "25px",
-                                    letterSpacing: "0em",
-                                    maxWidth: '100%', p: '0',
-                                    color: '#4F4F4F',
-                                }
-                            }>
+                            </DetailText>
+                            <ContentText >
                                 {x.content()}
-                            </Typography>
+                            </ContentText>
                         </Box>
                     )
                 })}
@@ -61,11 +47,10 @@ export function About() {
         return (
             <Box sx={{
                 order: props.order,
-                border: '1.65419px dashed #AF0116', mx: { xs: 'auto' },
-                ml: { xs: 'auto', lg: `${5.7 - 1.2}rem`, xl:'auto' }, borderRadius: '260.4px',
+                border: '.14rem dashed rgba(175, 1, 22, .2)', mx: { xs: 'auto' },
+                borderRadius: '260.4px',
                 p: { xs: '1.4rem 1.8rem', lg: "3rem 3.7rem" },
-                // m: { xl: 'auto' },
-                width: { xs: 258.63, lg: 531.4 }, height: { xs: '404px', lg: '830px' }
+                width: { xs: 258.63, lg: 531.64 }
             }}>
                 <Box component={'img'} src={process.env.PUBLIC_URL + '/images/favour.png'} height={'100%'} width={'100%'} alt="" />
             </Box>
@@ -73,7 +58,7 @@ export function About() {
     }
     const Metrics = (props) => {
         const metrics = [
-            { metric: 'Years of Experience', content: () => <>2 <span>yrs</span> </> },
+            { metric: 'Years of Experience', content: () => <>2 <span style={{fontSize:'2rem'}}>yrs</span> </> },
             { metric: 'Satisfactory Client', content: () => <>100%</> },
             { metric: 'Number of Clients', content: () => <>+10</> },
             { metric: 'Projects done', content: () => <>+10</> },
@@ -86,26 +71,13 @@ export function About() {
                             fontFamily: "'DM Sans'",
                             fontStyle: "normal", textAlign: { xs: 'center', lg: 'right' }
                         }}>
-                            <Typography
-                                sx={{
-                                    fontWeight: "400",
-                                    fontSize: "1.8rem",
-                                    lineHeight: "2.3rem",
-                                    color: ' #828282;',
-                                    mb:'.8rem'
-                                }}>
+                            <Metric>
                                 {x.metric}
-                            </Typography>
+                            </Metric>
 
-                            <Typography
-                                sx={{
-                                    fontWeight: "500",
-                                    fontSize: "3.2rem",
-                                    lineHeight: "2.5rem",
-                                    color: ' #4F4F4F;'
-                                }}>
+                            <MetricNum>
                                 {x.content()}
-                            </Typography>
+                            </MetricNum>
                         </Box>
                     )
                 })}
@@ -119,9 +91,14 @@ export function About() {
              *A margin top is added to move over the abslute top property from the above Typos
             */}
             <Box component={'div'} sx={{
-                display: 'flex', flexDirection: { xs: 'column', lg: 'row' }, gap: { xs: '40px', lg: '0' },
-                alignItems: 'center', mt: { xs: '212px', lg: '358.97px' },
-                justifyContent: { lg: 'center', xl: 'space-evenly' }, px: { xs: 'auto', lg: '10rem' }, maxWidth: '1440px', mx: 'auto'
+                display: 'flex',
+                flexDirection: { xs: 'column', lg: 'row' },
+                // border: '1px solid red',
+                alignItems: 'center',
+                mt: { xs: '40px', lg: '64px' },
+                justifyContent: { lg: 'center', xl: 'space-between' },
+                px: { xs: 'auto', lg: '9rem' },
+                maxWidth: '1440px', mx: 'auto'
             }}>
                 <Details order={{ xs: 3, lg: 1 }} />
                 <Image order={{ xs: 1, lg: 2 }} />

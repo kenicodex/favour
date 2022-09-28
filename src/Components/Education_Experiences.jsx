@@ -1,5 +1,7 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
+import { EeDescription, EeDuration, EeHeader, EePosition, HeaderText2 } from './Text'
+import { links } from './links'
 
 function EducationExperiences() {
     // const [full, setfull] = useState('')
@@ -57,62 +59,31 @@ function EducationExperiences() {
 
     // ]
     const Component = (props) => {
-        return <Box  sx={{
+        return <Box sx={{
             display: 'grid', columnGap: '120px', rowGap: { xs: '32px', lg: '64px' },
             width: { xs: '100%', lg: '100%' },
         }} className={'gridContainer'}>
             {
                 props.data.map((x, i) => {
                     return (
-                        <Box  key={i} sx={{ gridArea: x.gridarea, width: { xs: '100%', lg: '423px' }, }}>
-                            <Typography
-                                sx={{
-                                    fontFamily: "'DM Sans'",
-                                    fontStyle: "normal",
-                                    fontWeight: "700",
-                                    fontSize: { xs: '1.8rem', lg: '2rem' },
-                                    lineHeight: "2.6rem",
-                                    color: "#333333",
-                                    mb:'5px'
-                                }}>
+                        <Box key={i} sx={{ gridArea: x.gridarea, width: { xs: '100%', lg: '423px' }, }}>
+                            <EeHeader>
                                 {x.org}
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    fontFamily: "'DM Sans'",
-                                    fontStyle: "normal",
-                                    fontWeight: "500",
-                                    fontSize: { xs: '1.4rem', lg: "1.6rem" },
-                                    lineHeight: "25px",
-                                    color: "#4F4F4F"
-                                }}>
+                            </EeHeader>
+                            <EePosition>
                                 {x.position}
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    fontFamily: "'DM Sans'",
-                                    fontStyle: "normal",
-                                    fontWeight: "400",
-                                    fontSize: { xs: '1.4rem', lg: "1.6rem" },
-                                    lineHeight: "1.6rem",
-                                    color: "#828282"
-                                }}>
+                            </EePosition>
+                            <EeDuration>
                                 {x.duration}
-                            </Typography>
-                            <Typography
-                                sx={{
-                                    fontFamily: "'DM Sans'",
-                                    fontStyle: "normal",
-                                    fontWeight: "400",
-                                    fontSize: { xs: '1.3rem', lg: "1.4rem" },
-                                    lineHeight: "23px",
-                                    color: "#4F4F4F", width: '100%',
-                                    wordWrap: 'break-word'
-                                }}>
+                            </EeDuration>
+                            <EeDescription>
                                 {x.achievement}
-                                {/* {x.achievementFull} */}
-                                <span style={{ color: '#AF0116', cursor: 'pointer', display: x.achievement.length > 1 ? 'inline-block' : 'none' }}> Read More</span>
-                            </Typography>
+                                <a href={links.linkedin} style={{
+                                    display: x.achievement.length < 1 ? 'none' : 'inline',
+                                    color: '#AF0116', cursor: 'pointer'
+                                }}> Read More
+                                </a>
+                            </EeDescription>
                         </Box>
                     )
                 })
@@ -125,19 +96,10 @@ function EducationExperiences() {
             height: { xs: 'auto', lg: 'auto' },
             p: { xs: '32px 4.1rem', lg: '48px 22.9rem' },
             maxWidth: '1440px', mx: 'auto',
-            wordWrap: 'break-word'
         }}>
-            <Typography
-                sx={{
-                    fontFamily: "'Libre Baskerville'",
-                    fontStyle: "normal",
-                    fontWeight: "700",
-                    fontSize: "2.5rem",
-                    lineHeight: "3.1rem", textAlign: 'center',
-                    mb: { xs: "37px", lg: '40px' }
-
-                }}>Education {`&`} Experiences</Typography>
-
+            <HeaderText2 sx={{ mb: { xs: "37px", lg: '40px' } }}>
+                Education {`&`} Experiences
+            </HeaderText2 >
             <Component data={education} />
 
         </Box >

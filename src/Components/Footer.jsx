@@ -1,7 +1,8 @@
 import { Box, Divider, Typography } from '@mui/material'
 import React from 'react'
-import { BsBehance, BsFacebook, BsInstagram, BsLinkedin, BsTwitter } from 'react-icons/bs'
+import { BsBehance, BsLinkedin, BsTwitter } from 'react-icons/bs'
 import { GoMail } from 'react-icons/go'
+import { links } from './links'
 
 export function Footer() {
     return (
@@ -13,8 +14,8 @@ export function Footer() {
                 minHeight: { xs: "309px", lg: '148px' },
                 //  pt: { xs: '32px', lg: '0' }
             }}>
-                <Box sx={{display:{xs:'inline-block',lg:'none'}}} component={'img'} src={process.env.PUBLIC_URL + '/images/footerlogo.png'} />
-                <Box sx={{display:{xs:'none',lg:'inline-block'}}} component={'img'} src={process.env.PUBLIC_URL + '/images/Design_Mogul.png'} />
+                <Box sx={{ display: { xs: 'inline-block', lg: 'none' } }} component={'img'} src={process.env.PUBLIC_URL + '/images/footerlogo.png'} />
+                <Box sx={{ display: { xs: 'none', lg: 'inline-block' } }} component={'img'} src={process.env.PUBLIC_URL + '/images/Design_Mogul.png'} />
 
                 <Box sx={{ display: 'flex', gap: { xs: '2.4rem', lg: '4.8rem' }, flexDirection: { xs: 'column', lg: 'row' }, mt: { xs: '3.2rem', lg: '0' } }}>
                     {[{ navitem: 'Works', link: '/' }, { navitem: 'My Resume', link: '/' }].map((x, i) => {
@@ -31,12 +32,13 @@ export function Footer() {
                 </Box>
 
                 <Box sx={{ display: 'flex', gap: '2.2rem' }}>
-                    <BsTwitter color="white" size={'2rem'} style={{ cursor: 'pointer' }} />
-                    <BsLinkedin color="white" size={'2rem'} style={{ cursor: 'pointer' }} />
-                    <BsBehance color="white" size={'2rem'} style={{ cursor: 'pointer' }} />
-                    <GoMail color="white" size={'2rem'} style={{ cursor: 'pointer' }} />
-                    <BsInstagram color="white" size={'2rem'} style={{ cursor: 'pointer' }} />
-                    <BsFacebook color="white" size={'2rem'} style={{ cursor: 'pointer' }} />
+
+                    <a href={links.twitter}><BsTwitter color=" #FFFFFF" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    <a href={links.linkedin} ><BsLinkedin color=" #FFFFFF" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    <a href={links.behance}><BsBehance color=" #FFFFFF" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    <a href={links.email}><GoMail color=" #FFFFFF" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    {/* <BsInstagram color="white" size={'2rem'} style={{ cursor: 'pointer' }} />
+                    <BsFacebook color="white" size={'2rem'} style={{ cursor: 'pointer' }} /> */}
                 </Box>
             </Box>
 

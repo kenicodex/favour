@@ -1,5 +1,6 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import React from 'react'
+import { ProjectButton } from './Button'
 
 export function Inquiry() {
     return (
@@ -35,30 +36,11 @@ export function Inquiry() {
                 Let’s work together and you can get best from me 😄
             </Typography>
 
-            <Button sx={{
-                display: "flex",
-                flexDirection: "row",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "8px 19px",
-                gap: "10px",
-                width: "169px",
-                height: "41px",
-                background: "#AF0116",
-                boxShadow: "0px 4px 15px rgba(175, 1, 22, 0.1)",
-                borderRadius: "10px",
+            <ProjectButton sx={{
                 mt: { xs: `${2.4 - .8}rem`, lg: `${3.2 - .8}rem` }
-
             }}>
-                <Typography sx={{
-                    fontFamily: "DM Sans",
-                    fontSize: { xs: '1.4rem', lg: "1.8rem" },
-                    fontWeight: "500",
-                    lineHeight: "25px",
-                    letterSpacing: "0em",
-                    color: 'white'
-                }}>Send me a mail</Typography>
-            </Button>
+                < >Send me a mail</>
+            </ProjectButton>
         </Box>
     )
 }
