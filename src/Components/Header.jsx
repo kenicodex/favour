@@ -3,27 +3,24 @@ import React from 'react'
 import { FavButton, ProjectButtonText } from './Button'
 import { links } from './links'
 import { HeaderText1 } from './Text'
-import Typed from "react-typed"
+import Typewriter from 'typewriter-effect';
+// import Typed from "react-typed"
 
 export function Header() {
     const Reveal = () => {
-        return <Typed
-            strings={[
-                " I'm <span style='color:#AF0116'> Favour Oyindamola Awosise </span>"
-            ]}
-            fadeOut={false}
-            typeSpeed={150}
-            backSpeed={0}
-            loop showCursor={false}
+        return <Typewriter
+            options={{
+                strings: [" I'm <span style='color:#AF0116'> Favour Oyindamola Awosise </span>"],
+                autoStart: true,
+                loop: true,
+            }}
         />
     }
-
-
     return (
         <Box sx={{ maxWidth: '1440px', mx: 'auto', textAlign: 'center', position: 'relative' }}>
-            <Box sx={{ width: { xs: 'fit-content', lg: 'fit-content' } , ml:{xs:'13%',lg:'30%'}}}>
-                <HeaderText1 sx={{ textAlign: 'left', mt: { xs: '40px', lg: '89px' }, mb: '21px', }}>
-                    Hello, <Reveal />
+            <Box sx={{ width: { xs: 'fit-content', lg: 'fit-content' }, ml: { xs: '13%', lg: '30%' } }}>
+                <HeaderText1 sx={{ textAlign: 'left', mt: { xs: '40px', lg: '89px' }, mb: '21px', display: 'flex', gap: '3px' }}>
+                    Hello, <span style={{ diplay: 'inline-block' }}><Reveal /></span>
                 </HeaderText1>
             </Box>
             <HeaderText1>A Product Designer</HeaderText1>
