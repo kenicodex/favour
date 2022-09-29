@@ -1,6 +1,7 @@
 import { Box, Typography } from '@mui/material'
 import React from 'react'
 import { ProjectButton } from './Button'
+import { links } from './links'
 
 export function Inquiry() {
     return (
@@ -36,8 +37,8 @@ export function Inquiry() {
                 Let’s work together and you can get best from me 😄
             </Typography>
 
-            <ProjectButton sx={{
-                mt: { xs: `${2.4 - .8}rem`, lg: `${3.2 - .8}rem` }
+            <ProjectButton as={'a'} href={links.email} sx={{
+                mt: { xs: `${2.4 - .8}rem`, lg: `${3.2 - .8}rem` }, textDecoration: 'none'
             }}>
                 < >Send me a mail</>
             </ProjectButton>
