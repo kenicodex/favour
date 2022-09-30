@@ -43,8 +43,8 @@ function Sidebar(props) {
                 </Box>
 
                 <Box sx={{ ml: '2rem', width: '100%', color: 'white', mt: '4rem' }}>
-                    <Typography sx={{ my: '1.2rem', fontSize: '1.5rem' }}>Work</Typography>
-                    <Typography sx={{ my: '1.2rem', fontSize: '1.5rem' }}>Resume</Typography>
+                    <Typography component={'a'} href={links.works} sx={{ my: '1.2rem', fontSize: '1.5rem' }}>Work</Typography>
+                    <Typography component={'a'} href={links.resume} sx={{ my: '1.2rem', fontSize: '1.5rem' }}>Resume</Typography>
                 </Box>
                 <Box sx={{}}>
                     <Box sx={{
@@ -59,7 +59,7 @@ function Sidebar(props) {
                             // { media: 'Instagram', icon: <AiFillInstagram />, link: links.linkedin },
                             // { media: 'Facebook', icon: <BsFacebook />, link: links.linkedin },
                         ].map((x, i) => {
-                            return <Box component={'a'} href={x.link} key={i} sx={{ textDecoration: 'none', display: 'flex', color: 'white', gap: '1rem', fontSize: '2rem' }}>
+                            return <Box component={'a'} target='blank' href={x.link} key={i} sx={{ textDecoration: 'none', display: 'flex', color: 'white', gap: '1rem', fontSize: '2rem' }}>
                                 {x.icon}
                                 <Typography sx={{ fontSize: '1.5rem' }}> {x.media}</Typography>
                             </Box>
