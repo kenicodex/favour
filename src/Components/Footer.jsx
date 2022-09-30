@@ -18,8 +18,8 @@ export function Footer() {
                 minHeight: { xs: "309px", lg: '148px' },
                 //  pt: { xs: '32px', lg: '0' }
             }}>
-                <Box sx={{ display: { xs: 'inline-block', lg: 'none' } }} component={'img'} src={process.env.PUBLIC_URL + '/images/footerlogo.png'} />
-                <Box sx={{ display: { xs: 'none', lg: 'inline-block' } }} component={'img'} src={process.env.PUBLIC_URL + '/images/Design_Mogul.png'} />
+                <Box sx={{ display: { xs: 'inline-block', lg: 'inline-block' } }} component={'img'} src={process.env.PUBLIC_URL + '/favicon.ico'} />
+                {/* <Box sx={{ display: { xs: 'none', lg: 'inline-block' } }} component={'img'} src={process.env.PUBLIC_URL + '/images/Design_Mogul.png'} /> */}
 
                 <Box sx={{ display: 'flex', gap: { xs: '2.4rem', lg: '4.8rem' }, flexDirection: { xs: 'column', lg: 'row' }, mt: { xs: '3.2rem', lg: '0' } }}>
                     {[{ click: () => { scrollToRef() }, target: '',ele:'div', navitem: 'Works', link: '#' }, { click: '', target: 'blank',ele:'a', navitem: 'My Resume', link: 'https://drive.google.com/file/d/1imrHK6_fTwk0Tbg-bFIOXe5JMmh59RgG/view?usp=drivesdk' }].map((x, i) => {

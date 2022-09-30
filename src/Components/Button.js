@@ -45,6 +45,7 @@ export const ProjectButton = styled('button')(
         border: 'none',
         fontSize: "1.7rem",
         lineHeight: "25px",
+        textDecoration:'none',
         '&:hover': {
             background: "#FFFFFF",
             border: '1px solid #AF0116',
@@ -60,7 +61,6 @@ export const ProjectButtonText = styled('span')(
         fontWeight: "500",
         fontSize: "1.8rem",
         lineHeight: "25px",
-        textDecorationLine: "underline",
         '&:hover':{
             color: '#AF0116 !important',
 
