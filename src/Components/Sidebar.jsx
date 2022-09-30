@@ -13,6 +13,10 @@ function Sidebar(props) {
     const toggle = () => {
         setShow(!show)
     }
+    const scrollToRef = () => {
+        const element = document.getElementById("projects");
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
     return (
         <>
             <Box onClick={() => { toggle() }}
@@ -43,8 +47,8 @@ function Sidebar(props) {
                 </Box>
 
                 <Box sx={{ ml: '2rem', width: '100%', color: 'white', mt: '4rem' }}>
-                    <Typography component={'a'} href={links.works} sx={{ my: '1.2rem', fontSize: '1.5rem' }}>Work</Typography>
-                    <Typography component={'a'} href={links.resume} sx={{ my: '1.2rem', fontSize: '1.5rem' }}>Resume</Typography>
+                    <Typography component={'div'} href={links.works} sx={{ my: '1.2rem', fontSize: '1.5rem' }} onClick={()=>{scrollToRef()}}>Work</Typography>
+                    <Typography  target="blank" component={'a'} href={links.resume} sx={{ my: '1.2rem', fontSize: '1.5rem', color:'white',textDecoration:'none' }}>Resume</Typography>
                 </Box>
                 <Box sx={{}}>
                     <Box sx={{

@@ -1,4 +1,5 @@
 import React from 'react'
+import ScrollTo from 'react-scroll-into-view'
 import './App.css'
 import { About } from './Components/About'
 import { Clients } from './Components/Clients'
@@ -19,7 +20,10 @@ function App() {
       <Clients />
       <EducationExperiences />
       <Tools />
-      <Projects />
+      <ScrollTo selector='#project'>
+
+        <Projects />
+      </ScrollTo>
       <Inquiry />
       <Footer />
     </>

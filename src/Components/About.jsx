@@ -98,7 +98,7 @@ export function About() {
                 
                 alignItems: 'center',
                 mt: { xs: '40px', lg: '64px' },
-                justifyContent: { lg: 'space-between', xl: 'space-between' },
+                // justifyContent: { lg: 'space-between', xl: 'space-between' },
                 px: { xs: 'auto', lg: '10rem' },
                 maxWidth: '1440px', mx: 'auto'
             }}>

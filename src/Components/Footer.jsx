@@ -5,6 +5,10 @@ import { GoMail } from 'react-icons/go'
 import { links } from './links'
 
 export function Footer() {
+    const scrollToRef = () => {
+        const element = document.getElementById("projects");
+        element.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+    }
     return (
         <Box sx={{ bgcolor: '#4F4F4F', maxHeight: { xs: '309px', lg: '300px' } }}>
 
@@ -18,16 +22,16 @@ export function Footer() {
                 <Box sx={{ display: { xs: 'none', lg: 'inline-block' } }} component={'img'} src={process.env.PUBLIC_URL + '/images/Design_Mogul.png'} />
 
                 <Box sx={{ display: 'flex', gap: { xs: '2.4rem', lg: '4.8rem' }, flexDirection: { xs: 'column', lg: 'row' }, mt: { xs: '3.2rem', lg: '0' } }}>
-                    {[{ target: '', navitem: 'Works', link: '#projects' }, { target: 'blank', navitem: 'My Resume', link: 'https://drive.google.com/file/d/1imrHK6_fTwk0Tbg-bFIOXe5JMmh59RgG/view?usp=drivesdk' }].map((x, i) => {
-                        return <Typography key={i} component="a" href={x.link} target={x.target} sx={{
+                    {[{ click: () => { scrollToRef() }, target: '',ele:'div', navitem: 'Works', link: '#' }, { click: '', target: 'blank',ele:'a', navitem: 'My Resume', link: 'https://drive.google.com/file/d/1imrHK6_fTwk0Tbg-bFIOXe5JMmh59RgG/view?usp=drivesdk' }].map((x, i) => {
+                        return <Typography key={i} component={x.ele} href={x.link} target={x.target} sx={{
                             fontFamily: "'DM Sans'",
                             fontStyle: "normal",
                             fontWeight: "400",
                             fontSize: "18px",
                             lineHeight: "23px",
                             color: "#FFFFFF", textAlign: 'center',
-                            cursor: 'pointer', textDecoration:'none'
-                        }}>{x.navitem}</Typography>
+                            cursor: 'pointer', textDecoration: 'none'
+                        }} onClick={() => { x.click() }}>{x.navitem}</Typography>
                     })}
                 </Box>
 

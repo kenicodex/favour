@@ -6,9 +6,14 @@ import { GoMail } from 'react-icons/go'
 import Sidebar from './Sidebar'
 import { links } from './links'
 const pxtoper = (px) => `${(px / 1440) * 100}%`
-console.log(process.env.PUBLIC_URL + "kjjjjk");
 
 export function Nav() {
+    const scrollToRef = () => {
+        const element = document.getElementById("projects");
+        element.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    }
+
+    // scrollToRef()
     return (
         <>
             <Sidebar />
@@ -25,9 +30,9 @@ export function Nav() {
                     pl: { xs: '', lg: pxtoper(376) },
                     pr: { xs: '', lg: pxtoper(380) },
                 }}>
-                    {[{ target: '', name: 'Works', link: links.works }, { target: 'blank', name: 'My Resume', link: links.resume }].map((link, i) => {
+                    {[{element:'div', target: '', name: 'Works', link: '', }, {element:'a', target: 'blank', name: 'My Resume', link: links.resume }].map((link, i) => {
                         return (
-                            <Typography href={link.link} key={i} target={link.target} component={'a'} sx={{
+                            <Typography href={link.link} key={i} target={link.target} component={link.element} onClick={() => { scrollToRef() }} sx={{
                                 display: { xs: 'none', lg: 'inline-block' },
                                 fontFamily: 'DM Sans',
                                 fontSize: '1.8rem', fontWeight: '400',
