@@ -6,5 +6,5 @@ export const  links = {
     twitter:www+'twitter.com/design_mogul_',
     email:'mailto:oyindamolafavour2017@gmail.com',
     works:'#projects',
-    resume:'/'
+    resume:'https://drive.google.com/file/d/1imrHK6_fTwk0Tbg-bFIOXe5JMmh59RgG/view?usp=drivesdk'
 }

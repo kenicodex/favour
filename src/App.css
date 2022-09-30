@@ -1,3 +1,7 @@
+* {
+  transition: 1 ease-in-out;
+}
+
 html {
   font-size: 62.5%;
   box-sizing: border-box;
@@ -22,4 +26,16 @@ html {
       'Obafemi'
       'Hub'
   }
+}
+
+.linesborder {
+
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25'  xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='268' ry='268' stroke='rgba(175, 1, 22, .2)' stroke-width='3' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  border-radius: 268px;
+
+  /* background-image: repeating-linear-gradient(177deg, rgba(175, 1, 22, .2), rgba(175, 1, 22, .2) 13px, transparent 13px, transparent 22px, rgba(175, 1, 22, .2) 22px), repeating-linear-gradient(267deg, rgba(175, 1, 22, .2), rgba(175, 1, 22, .2) 13px, transparent 13px, transparent 22px, rgba(175, 1, 22, .2) 22px), repeating-linear-gradient(-3deg, rgba(175, 1, 22, .2), rgba(175, 1, 22, .2) 13px, transparent 13px, transparent 22px, rgba(175, 1, 22, .2) 22px), repeating-linear-gradient(87deg, rgba(175, 1, 22, .2), rgba(175, 1, 22, .2) 13px, transparent 13px, transparent 22px, rgba(175, 1, 22, .2) 22px);
+  background-size: 1px 100%, 100% 1px, 1px 100% , 100% 1px;
+  background-position: 0 0, 0 0, 100% 0, 0 100%;
+  background-repeat: no-repeat; */
+  /* border-radius: 268px; */
 }

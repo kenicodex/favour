@@ -24,13 +24,14 @@ export function About() {
         ]
         return (
             <Box sx={{
-                order: props.order, display: 'flex', mt:{xs:'4rem', lg:'0'},
+                order: props.order, display: 'flex', mt: { xs: '4rem', lg: '0' },
                 flexDirection: 'column', gap: { xs: '32px', lg: '95px' },
-                maxWidth: { xs: 'auto', lg: pxtoper(260) }, pl: { xs: 'auto', lg: '1.1rem' }
+                width: { xs: 'auto', lg: pxtoper(260) },
+                
             }}>
                 {details.map((x, i) => {
                     return (
-                        <Box key={i} sx={{ textAlign: { xs: 'center', lg: 'left' }, px: { xs: '3.2rem', lg: '0' },  }}>
+                        <Box key={i} sx={{ textAlign: { xs: 'center', lg: 'left' }, px: { xs: '3.2rem', lg: '0' }, }}>
                             <DetailText>
                                 {x.detail}
                             </DetailText>
@@ -45,12 +46,10 @@ export function About() {
     }
     const Image = (props) => {
         return (
-            <Box sx={{
-                order: props.order,
-                border: '.14rem dashed rgba(175, 1, 22, .2)', mx: { xs: 'auto' },
-                borderRadius: '260.4px',
+            <Box className='linesborder' sx={{
+                order: props.order, mx: { xs: 'auto' },
                 p: { xs: '1.4rem 1.8rem', lg: "3rem 3.7rem" },
-                width: { xs: 258.63, lg: 531.64 }
+                width: { xs: 258.63, lg: 531.64 }, 
             }}>
                 <Box component={'img'} src={process.env.PUBLIC_URL + '/images/favour.png'} height={'100%'} width={'100%'} alt="" />
             </Box>
@@ -58,13 +57,16 @@ export function About() {
     }
     const Metrics = (props) => {
         const metrics = [
-            { metric: 'Years of Experience', content: () => <>2 <span style={{fontSize:'2rem'}}>yrs</span> </> },
+            { metric: 'Years of Experience', content: () => <>2 <span style={{ fontSize: '2rem' }}>yrs</span> </> },
             { metric: 'Satisfactory Client', content: () => <>100%</> },
             { metric: 'Number of Clients', content: () => <>+10</> },
             { metric: 'Projects done', content: () => <>+10</> },
         ]
         return (
-            <Box sx={{ order: props.order, display: 'flex', flexDirection: 'column', gap: { xs: '40px', lg: '136px' } }}>
+            <Box sx={{
+                order: props.order, display: 'flex', width: { xs: 'auto', lg: pxtoper(260) },
+                flexDirection: 'column', gap: { xs: '40px', lg: '136px' }, 
+            }}>
                 {metrics.map((x, i) => {
                     return (
                         <Box key={i} sx={{
@@ -93,11 +95,11 @@ export function About() {
             <Box component={'div'} sx={{
                 display: 'flex',
                 flexDirection: { xs: 'column', lg: 'row' },
-                // border: '1px solid red',
+                
                 alignItems: 'center',
                 mt: { xs: '40px', lg: '64px' },
-                justifyContent: { lg: 'center', xl: 'space-between' },
-                px: { xs: 'auto', lg: '9rem' },
+                justifyContent: { lg: 'space-between', xl: 'space-between' },
+                px: { xs: 'auto', lg: '10rem' },
                 maxWidth: '1440px', mx: 'auto'
             }}>
                 <Details order={{ xs: 3, lg: 1 }} />

@@ -78,9 +78,9 @@ function EducationExperiences() {
                             </EeDuration>
                             <EeDescription>
                                 {x.achievement}
-                                <a href={links.linkedin} style={{
+                                <a href={links.linkedin} target='blank' style={{
                                     display: x.achievement.length < 1 ? 'none' : 'inline',
-                                    color: '#AF0116', cursor: 'pointer'
+                                    color: '#AF0116', cursor: 'pointer', textDecoration: 'none'
                                 }}> Read More
                                 </a>
                             </EeDescription>

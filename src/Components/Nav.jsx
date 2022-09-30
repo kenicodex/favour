@@ -25,14 +25,14 @@ export function Nav() {
                     pl: { xs: '', lg: pxtoper(376) },
                     pr: { xs: '', lg: pxtoper(380) },
                 }}>
-                    {[{ name: 'Works', link: links.works }, { name: 'My Resume', link:links.resume }].map((link, i) => {
+                    {[{ target: '', name: 'Works', link: links.works }, { target: 'blank', name: 'My Resume', link: links.resume }].map((link, i) => {
                         return (
-                            <Typography href={link.link} key={i} component={'a'} sx={{
+                            <Typography href={link.link} key={i} target={link.target} component={'a'} sx={{
                                 display: { xs: 'none', lg: 'inline-block' },
                                 fontFamily: 'DM Sans',
                                 fontSize: '1.8rem', fontWeight: '400',
-                                textDecoration:'none',color:'black',
-                                textAlign: 'left',cursor:'pointer'
+                                textDecoration: 'none', color: 'black',
+                                textAlign: 'left', cursor: 'pointer'
                             }}>{link.name}</Typography>
                         )
                     })}
@@ -43,10 +43,10 @@ export function Nav() {
                     gap: { xs: '', lg: '2.2rem' }
                 }}>
 
-                    <a href={links.twitter}><BsTwitter color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
-                    <a href={links.linkedin} ><BsLinkedin color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
-                    <a href={links.behance}><BsBehance color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
-                    <a href={links.email}><GoMail color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    <a target='blank' href={links.twitter}><BsTwitter color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    <a target='blank' href={links.linkedin} ><BsLinkedin color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    <a target='blank' href={links.behance}><BsBehance color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
+                    <a target='blank' href={links.email}><GoMail color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /></a>
                     {/* <AiFillInstagram color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} />
                     <BsFacebook color=" #333333" size={'2rem'} style={{ cursor: 'pointer' }} /> */}
                 </Box>

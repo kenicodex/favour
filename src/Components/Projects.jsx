@@ -16,7 +16,7 @@ export function Projects() {
             projectdescription: 'A saving and micro investment application for students (undergraduates). This application allows students to save for a long period of time.',
             button: () => {
                 return (
-                    <ProjectButton as='a' href={'https://www.figma.com/exit?url=https%3A%2F%2Fwww.behance.net%2Fgallery%2F147823015%2FSAVIN-A-saving-and-micro-investment-app-%2528CASE-STUDY%2529'}>
+                    <ProjectButton as='a'target='blank' href={'https://www.behance.net/gallery/147823015/SAVIN-A-saving-and-micro-investment-app-%28CASE-STUDY%29'}>
                         <ProjectButtonText>Read Casestudy</ProjectButtonText>
                     </ProjectButton>)
             }
@@ -26,7 +26,7 @@ export function Projects() {
             projectdescription: 'The main goal of this project is to add a unique feature to whatsapp which is a scheduling messages feature. This help users to keep track of important messages',
             button: () => {
                 return (<ProjectButton as={'a'}
-                    href={'https://www.figma.com/exit?url=https%3A%2F%2Fwww.behance.net%2Fgallery%2F143570031%2FWhatsApp-Scheduling-Message-Feature%2528Mini-Case-Study%2529'}>
+                   target='blank' href={'https://www.behance.net/gallery/143570031/WhatsApp-Scheduling-Message-Feature%28Mini-Case-Study%29'}>
                     <ProjectButtonText>Read Casestudy</ProjectButtonText>
                 </ProjectButton>)
             }
@@ -36,7 +36,7 @@ export function Projects() {
             projectdescription: 'A real estate website where users can easily find a suitable house to buy and rent. ',
             button: () => {
                 return (<ProjectButton as={'a'}
-                    href={'https://www.figma.com/exit?url=https%3A%2F%2Fwww.behance.net%2Fgallery%2F148093393%2FGerlach-Real-Estate-Landing-Page'}>
+                   target='blank' href={'https://www.behance.net/gallery/148093393/Gerlach-Real-Estate-Landing-Page'}>
                     <ProjectButtonText>View Design</ProjectButtonText>
                 </ProjectButton>)
             }
@@ -46,7 +46,7 @@ export function Projects() {
             projectdescription: 'A website where we grow creative ideas. Users get to learn various tech skills on the platform.',
             button: () => {
                 return (<ProjectButton as={'a'}
-                    href={'https://www.figma.com/exit?url=https%3A%2F%2Fwww.behance.net%2Fgallery%2F141331747%2FA-landing-page-for-a-learning-platform'}>
+                   target='blank' href={'https://www.behance.net/gallery/141331747/A-landing-page-for-a-learning-platform'}>
                     <ProjectButtonText>View Design</ProjectButtonText>
                 </ProjectButton>)
             }
